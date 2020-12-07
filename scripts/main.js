@@ -58,7 +58,166 @@
 // })
 
 
-//Mosh - Exercise 1
-//
+//Mosh Exercises 1 / Max of Two Numbers
+// Write a function that takes two numbers 
+// and returns the maximum of the two - the one that is the biggest
+// Call and make sure it works
+
+
+//  const max = (number1, number2) => {
+//   // if number1 is bigger than number2, return number1, 
+//   // if it's not return number2
+//   return (number1 > number2) ? number1: number2;
+
+//  }
+
+//  let number = max(10,5);
+// console.log(number);
+
+
+//Mosh Exercises 2 / Landscape or Portrait
+// isLandscape will return true, if the width is larger than the height
+// if else, it will return false
+
+// const isLandscape = (width, height) => {
+//   if (width > height) {
+//     console.log(true);
+//   }
+//   else {
+//     console.log(false);
+//   }
+// }
+
+// Another way to write
+// const isLandscape = (width, height) => {
+//   if (width > height) console.log(true);
+//     else console.log(false);
+//   }
+
+// let measurements = isLandscape(1920, 1080);
+
+// Code like this can look very amateurish.
+// You don't want to explicitly say true or false. It's ugly
+
+// const isLandscape = (width, height) => {
+//   return (width > height) ? console.log(true): console.log(false);
+// }
+
+// let measurements = isLandscape(1920, 1080);
+
+// There is no need to explicity say true or false
+// it it already embedded, an innate feature
+// This is prettier
+
+// const isLandscape = (width, height) => {
+//   return (width > height);
+// }
+
+// console.log(isLandscape(1920, 1080));
+
+// Mosh Exercises 3 / FizzBuzz
+// Very popular interview question called FizzBuzz algorithm 
+// function called fizzBuzz, give it an input and return a string
+
+// Divisible by 3 = Fizz
+// Divisible by 5 = Buzz
+// Divisible by 3 and 5, = FizzBuzz
+// Not divisible by 3 or 5, you get the same input
+// If you don't pass a number, but a string - you get "Not a number"
+
+// this is what you did with holy fish!!
+// const fizzBuzz = (input) => {
+//   if (typeof input !== 'number')
+//     return NaN;
+    
+//   if ((input % 3 === 0) && (input % 5 === 0))
+//     return 'FizzBuzz';
+
+//   if (input % 3 === 0)
+//     return 'Fizz';
+
+//   if (input % 5 === 0)
+//     return 'Buzz';
+
+//   return input;
+// }
+
+// const output = fizzBuzz(false);
+// console.log(output);
+
+// Mosh Exercises 4 / Demerit Points
+
+// Speed Limit = 70 = OK
+// Every 5 kilometers above the speed limit = Get 1 Point
+// 5 -> Point:
+// Need to use Math.floor(1.3) - floating number
+// More than 12 points = License suspended
+
+// For every 5mph above Speed Limit (70), user gets 1 point
+
+
+// if speed at 70 = console.log(OK!)
+// if speed above 75, user will log 1 point for every 5mph over
+// if above 70, then that number - 70, and then divide by 5
+
+// Rickie's
+// let currentPoints = 0;
+
+// const checkSpeed = (speed) => {
+
+//   const speedCalculator = () => {
+//     let currentPoints = ((speed - 70) / 5)
+//     console.log(`Points: ${currentPoints}`)
+//   }
+
+//   if (speed === 70) {
+//     console.log('OK');
+//   }
+//   else if (speed >= 75) {
+//     speedCalculator();
+//   }
+
+// }
+
+// checkSpeed(100);
+
+//Mosh
+// You will always want to define the numbers - Use variables
+// It's easier to read
+// const checkSpeed = (speed) => { 
+//   const speedLimit = 70;
+//   const mphPerPoint = 5;
+
+//   if (speed <= speedLimit + mphPerPoint) {
+//     console.log('OK');
+//   }
+//   else {
+//     const points = Math.floor((speed - speedLimit) / mphPerPoint);
+//     if (points >= 12)
+//       console.log('License suspended')
+//     else
+//       console.log('Points', points);
+//   }
+// }
+
+// checkSpeed(130);
+
+// // Another way to write it, without indentation of else
+// const checkSpeed = (speed) => { 
+//   const speedLimit = 70;
+//   const mphPerPoint = 5;
+
+//   if (speed <= speedLimit + mphPerPoint) {
+//     console.log('OK');
+//     return;
+//   }
+//   const points = Math.floor((speed - speedLimit) / mphPerPoint);
+//   if (points >= 12)
+//     console.log('License suspended')
+//   else
+//     console.log('Points', points);
+// }
+
+// checkSpeed(130);
 
 
