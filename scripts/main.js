@@ -220,4 +220,99 @@
 
 // checkSpeed(130);
 
+// Lightning Exercise 3? 4?
+// Add a <section> element with an id of family to your index.html
+// Use a good old for loop to iterate over this array of objects to pull out the 
+// names of the family members and represent them as HTML by wrapping each in an <h3> tag. Append them to the DOM.
+// Achieve the same result using .map()
 
+// let family = [
+//   {
+//     name: "Fred Jones",
+//     age: 49,
+//     title: "parent"
+//   },
+//   {
+//     name: "Pat Jones",
+//     age: 50,
+//     title: "parent"
+//   },
+//   {
+//     name: "Bubba Jones",
+//     age: 20,
+//     title: "adult child"
+//   },
+//   {
+//     name: "Kelly Jones",
+//     age: 12,
+//     title: "dependent child"
+//   },
+//   {
+//     name: "Bartleby",
+//     age: 3,
+//     title: "pet"
+//   }
+// ]
+
+// const familyElement = document.querySelector("#family");
+
+// const familyMap = () => {
+//   familyElement.innerHTML += family.map( (member) => {
+//     return `<h3>${member.name}</h3>`;
+//   })
+//   .join("")
+// }
+
+// familyMap();
+
+
+// .filter
+// filtering each object with a certain condition into a variable
+// then spits it out as an array of objects
+// Use this array method instead to find multiple things that fit your condition
+// const adults = family.filter((familyMember) => familyMember.age >= 18)
+
+// // .find
+// // Finding the first thing it can find, and return it back to you
+// // Function's job is to return the thing that is in it's condition
+// // So in thise case, only one parent object was returned to you, despite there being two parents
+// const parent = family.find( (familyMember) => familyMember.title === "parent")
+
+// // .map
+// // 
+
+// console.log('With .filter, Grownups?', adults);
+// console.log('With .find, Parents', parent);
+
+
+// Lightning Round | December 8th, 2020
+
+let employee = {
+  name: "Jeff Winger",
+  age: 37,
+  department: "legal",
+  hire_date: "09/22/2010"
+}
+
+// Using the object above, console log "Our company's lawyer is Jeff Winger" using dot notation to access 'name'
+// Console log "Jeff was hired on 09/22/2010" using bracket notation.
+// Add a new key, vacation_days, and its value, 20, to employee. Use either dot or bracket notation. Does it matter which one you use? Try both to find out.
+// let eom = "employee_of_the_month";
+// Use the variable above to add a new property to employee. Set its value to false. Should you use dot or bracket notation?
+
+
+// console.log(`Our company's lawyer is ${employee.name}.`)
+// console.log(`${employee['name']} was hired on ${employee['hire_date']}.`)
+
+// employee.vacation_days = 20
+// employee['vacation_days'] = 20
+// console.log(employee)
+
+// let eom = "employee_of_the_month";
+// employee['eom'] = false;
+
+// console.log(`Our company's lawyer is ${employee['name']}.`)
+// console.log(employee)
+
+
+// employee['name'], employee['hire_date']
